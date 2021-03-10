@@ -1,0 +1,345 @@
+@font-face {
+  font-family: Gotham-Black;
+  src: url("../fonts/Gotham-Black.otf");
+}
+
+@font-face {
+  font-family: Gotham-Bold;
+  src: url("../fonts/Gotham-Bold.otf");
+}
+@font-face {
+  font-family: Gotham-Book;
+  src: url("../fonts/Gotham-Book.otf");
+}
+@font-face {
+  font-family: Gotham-Light;
+  src: url("../fonts/Gotham-Light.otf");
+}
+@font-face {
+  font-family: Gotham-Medium;
+  src: url("../fonts/Gotham-Medium.otf");
+}
+@font-face {
+  font-family: Gotham-ThinItalic;
+  src: url("../fonts/Gotham-ThinItalic.otf");
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.visibility-hidden,
+.visibility-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@media (min-width: 1700px) {
+  main {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
+main {
+  .wrapper {
+    width: 87%;
+    margin: 10vh auto 0;
+    display: flex;
+    justify-content: space-between;
+    .logo-and-text {
+      width: 25%;
+      padding: 30px 40px 0 40px;
+      display: flex;
+      flex-direction: column;
+
+      .logo {
+        svg {
+          display: block;
+          width: 100%;
+        }
+      }
+      .text {
+        margin-top: auto;
+        h2 {
+          color: rgba($color: #000000, $alpha: 0.2);
+          font-family: Gotham-Book;
+          letter-spacing: 4.5px;
+          line-height: 1.5;
+          font-size: 15px;
+          span {
+            display: block;
+          }
+        }
+        p {
+          font-family: Gotham-Book;
+          line-height: 1.5;
+          font-size: 12px;
+        }
+      }
+    }
+    .slider {
+      padding: 0;
+      margin: 0;
+      width: 70%;
+      height: 100%;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+      .second-image {
+        transform: rotateY(180deg);
+      }
+      .slick-dots {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        button {
+          transform: scale(2);
+        }
+      }
+    }
+  }
+  .mobile-vertical-line {
+    display: none;
+  }
+  .contact {
+    position: relative;
+    .horizontal-line {
+      width: 100px;
+      position: absolute;
+      height: 1px;
+      border-top: solid 2px black;
+      right: -10%;
+      top: -15px;
+      transition: all 0.1s;
+    }
+    font-family: Gotham-Book;
+    font-size: 14px;
+    width: 87%;
+    margin: 50px auto 80px;
+    text-align: right;
+    p,
+    a {
+      margin: 12px 0;
+    }
+    a {
+      display: block;
+    }
+  }
+}
+
+footer {
+  border-top: solid 1px rgba($color: #707070, $alpha: 0.2);
+  padding: 30px 0 60px 0;
+  .wrapper {
+    margin: 0 auto;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      position: relative;
+      font-size: 14px;
+      font-family: Gotham-Book;
+      letter-spacing: 2px;
+    }
+    .gtc {
+      position: relative;
+      height: 12px;
+      overflow: hidden;
+      &:hover > span {
+        display: block;
+        transition: all 0.5s;
+        transform: translateY(-12px);
+      }
+      &:hover::after {
+        transition: all 0.5s;
+        transform: translateY(-13px);
+      }
+    }
+
+    .gtc::after {
+      content: "GTC";
+      display: block;
+    }
+
+    .imprint {
+      position: relative;
+      height: 12px;
+      overflow: hidden;
+      &:hover > span {
+        display: block;
+        transition: all 0.5s;
+        transform: translateY(-12px);
+      }
+      &:hover::after {
+        transition: all 0.5s;
+        transform: translateY(-13px);
+      }
+    }
+
+    .imprint::after {
+      content: "IMPRINT";
+      display: block;
+    }
+    .imprint {
+      padding: 0 30px;
+      border-left: solid 1px black;
+      border-right: solid 1px black;
+    }
+    .data-protection {
+      position: relative;
+      height: 12px;
+      overflow: hidden;
+      &:hover > span {
+        display: block;
+        transition: all 0.5s;
+        transform: translateY(-12px);
+      }
+      &:hover::after {
+        transition: all 0.5s;
+        transform: translateY(-13px);
+      }
+    }
+
+    .data-protection::after {
+      content: "DATA PROTECTION";
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  main {
+    .wrapper {
+      flex-direction: column;
+      align-items: center;
+
+      .logo-and-text {
+        width: 80%;
+        margin-bottom: 10vh;
+        max-width: 600px;
+
+        .text {
+          h2 {
+            span {
+              display: inline;
+            }
+          }
+          margin-top: 5vh;
+          text-align: center;
+        }
+      }
+      .slider {
+        width: 90%;
+      }
+    }
+    .mobile-vertical-line {
+      display: block;
+      width: 1px;
+      height: 80px;
+      margin: 50px auto;
+      border-right: solid 2px black;
+    }
+    .contact {
+      .horizontal-line {
+        display: none;
+      }
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    width: 100%;
+    overflow-x: hidden;
+    padding: 30px 0;
+    .wrapper {
+      .logo-and-text {
+        .text {
+          h2 {
+            span {
+              display: block;
+            }
+          }
+        }
+      }
+      width: 200px;
+      flex-direction: column;
+      align-items: center;
+      a {
+        margin: 10px 0;
+      }
+      .imprint {
+        border: none;
+      }
+    }
+  }
+}
+
+//GTC IMPRINT DATA PROTECTION PAGE
+
+header {
+  .back-home {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #707070;
+
+    svg {
+      fill: #d1d1d1;
+      display: block;
+      width: 50px;
+      position: absolute;
+      top: 110px;
+      left: 110px;
+      transform: rotateZ(45deg);
+    }
+  }
+  font-family: Gotham-Book;
+  a {
+    display: block;
+  }
+  svg {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+  }
+  h1 {
+    text-align: center;
+  }
+}
+
+.sub-page-main {
+  max-width: 1000px;
+  margin-top: 100px;
+  font-family: Gotham-Book;
+  width: 80%;
+  margin: 50px auto 100px;
+  line-height: 1.5;
+  a {
+    display: block;
+    margin: 10px 0;
+  }
+}
