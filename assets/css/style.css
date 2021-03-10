@@ -24,7 +24,8 @@
 
 body {
   width: 100vw;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  margin: 0; }
 
 a {
   text-decoration: none;
@@ -77,6 +78,8 @@ main .wrapper {
         font-family: Gotham-Book;
         line-height: 1.5;
         font-size: 12px; }
+        main .wrapper .logo-and-text .text p:last-child {
+          margin-bottom: 0; }
   main .wrapper .slider {
     padding: 0;
     margin: 0;
@@ -84,6 +87,7 @@ main .wrapper {
     height: 100%;
     overflow: hidden; }
     main .wrapper .slider img {
+      outline: none;
       width: 100%; }
     main .wrapper .slider .second-image {
       transform: rotateY(180deg); }
@@ -216,6 +220,8 @@ footer {
       display: none; } }
 
 @media (max-width: 600px) {
+  main .wrapper .slider {
+    width: 100vw; }
   footer {
     width: 100%;
     overflow-x: hidden;

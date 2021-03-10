@@ -27,6 +27,7 @@
 body {
   width: 100vw;
   overflow-x: hidden;
+  margin: 0;
 }
 
 a {
@@ -91,6 +92,9 @@ main {
           font-family: Gotham-Book;
           line-height: 1.5;
           font-size: 12px;
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
       }
     }
@@ -101,6 +105,7 @@ main {
       height: 100%;
       overflow: hidden;
       img {
+        outline: none;
         width: 100%;
       }
       .second-image {
@@ -280,6 +285,13 @@ footer {
 }
 
 @media (max-width: 600px) {
+  main {
+    .wrapper {
+      .slider {
+        width: 100vw;
+      }
+    }
+  }
   footer {
     width: 100%;
     overflow-x: hidden;
