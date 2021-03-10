@@ -66,7 +66,7 @@ main .wrapper {
     main .wrapper .logo-and-text .text {
       margin-top: auto; }
       main .wrapper .logo-and-text .text h2 {
-        color: rgba(0, 0, 0, 0.2);
+        color: black;
         font-family: Gotham-Book;
         letter-spacing: 4.5px;
         line-height: 1.5;
@@ -89,10 +89,17 @@ main .wrapper {
       transform: rotateY(180deg); }
     main .wrapper .slider .slick-dots {
       position: absolute;
-      bottom: 20px;
+      bottom: 10px;
       width: 100%; }
       main .wrapper .slider .slick-dots button {
-        transform: scale(2); }
+        transform: scale(1); }
+        main .wrapper .slider .slick-dots button:before {
+          content: "";
+          width: 0.8rem;
+          height: 0.8rem;
+          background-color: #fff;
+          color: white;
+          border-radius: none; }
 
 main .mobile-vertical-line {
   display: none; }
@@ -109,9 +116,10 @@ main .contact {
     position: absolute;
     height: 1px;
     border-top: solid 2px black;
-    right: -10%;
-    top: -15px;
-    transition: all 0.1s; }
+    right: -120px;
+    top: 5px;
+    transform: translateX(1000px);
+    transition: all 2s; }
   main .contact p,
   main .contact a {
     margin: 12px 0; }
@@ -128,12 +136,13 @@ footer {
     justify-content: space-between; }
     footer .wrapper a {
       position: relative;
-      font-size: 14px;
+      font-size: 12px;
       font-family: Gotham-Book;
       letter-spacing: 2px; }
     footer .wrapper .gtc {
       position: relative;
       height: 12px;
+      line-height: 1;
       overflow: hidden; }
       footer .wrapper .gtc:hover > span {
         display: block;
@@ -141,13 +150,14 @@ footer {
         transform: translateY(-12px); }
       footer .wrapper .gtc:hover::after {
         transition: all 0.5s;
-        transform: translateY(-13px); }
+        transform: translateY(-12px); }
     footer .wrapper .gtc::after {
       content: "GTC";
       display: block; }
     footer .wrapper .imprint {
       position: relative;
       height: 12px;
+      line-height: 1;
       overflow: hidden; }
       footer .wrapper .imprint:hover > span {
         display: block;
@@ -155,7 +165,7 @@ footer {
         transform: translateY(-12px); }
       footer .wrapper .imprint:hover::after {
         transition: all 0.5s;
-        transform: translateY(-13px); }
+        transform: translateY(-12px); }
     footer .wrapper .imprint::after {
       content: "IMPRINT";
       display: block; }
@@ -166,6 +176,7 @@ footer {
     footer .wrapper .data-protection {
       position: relative;
       height: 12px;
+      line-height: 1;
       overflow: hidden; }
       footer .wrapper .data-protection:hover > span {
         display: block;
@@ -173,7 +184,7 @@ footer {
         transform: translateY(-12px); }
       footer .wrapper .data-protection:hover::after {
         transition: all 0.5s;
-        transform: translateY(-13px); }
+        transform: translateY(-12px); }
     footer .wrapper .data-protection::after {
       content: "DATA PROTECTION";
       display: block; }
@@ -184,7 +195,7 @@ footer {
     align-items: center; }
     main .wrapper .logo-and-text {
       width: 80%;
-      margin-bottom: 10vh;
+      margin-bottom: 50px;
       max-width: 600px; }
       main .wrapper .logo-and-text .text {
         margin-top: 5vh;
@@ -213,10 +224,27 @@ footer {
       width: 200px;
       flex-direction: column;
       align-items: center; }
-      footer .wrapper .logo-and-text .text h2 span {
-        display: block; }
       footer .wrapper a {
-        margin: 10px 0; }
+        margin: 10px 0;
+        font-size: 11px; }
+      footer .wrapper .gtc {
+        height: 11px; }
+        footer .wrapper .gtc:hover > span {
+          transform: translateY(-11px); }
+        footer .wrapper .gtc:hover::after {
+          transform: translateY(-11px); }
+      footer .wrapper .imprint {
+        height: 11px; }
+        footer .wrapper .imprint:hover > span {
+          transform: translateY(-11px); }
+        footer .wrapper .imprint:hover::after {
+          transform: translateY(-11px); }
+      footer .wrapper .data-protection {
+        height: 11px; }
+        footer .wrapper .data-protection:hover > span {
+          transform: translateY(-11px); }
+        footer .wrapper .data-protection:hover::after {
+          transform: translateY(-11px); }
       footer .wrapper .imprint {
         border: none; } }
 
@@ -254,6 +282,9 @@ header {
   width: 80%;
   margin: 50px auto 100px;
   line-height: 1.5; }
+  .sub-page-main p {
+    font-size: 12px; }
   .sub-page-main a {
+    font-size: 12px;
     display: block;
     margin: 10px 0; }
