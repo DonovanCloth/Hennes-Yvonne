@@ -95,8 +95,8 @@ main .wrapper {
         transform: scale(1); }
         main .wrapper .slider .slick-dots button:before {
           content: "";
-          width: 0.8rem;
-          height: 0.8rem;
+          width: 0.6rem;
+          height: 0.6rem;
           background-color: #fff;
           color: white;
           border-radius: none; }
